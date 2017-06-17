@@ -1,9 +1,6 @@
-﻿using System;
-
-using ArduinoController.Models;
-
+﻿using ArduinoController.Database.Models;
+using System;
 using Xamarin.Forms;
-using ArduinoController.Database.Models;
 
 namespace ArduinoController.Views
 {
@@ -27,7 +24,7 @@ namespace ArduinoController.Views
         async void SaveClicked(object sender, EventArgs e)
         {
             await App.Database.SaveProjectAsync(Project);
-
+            await Navigation.PushAsync(new NewProjectDetailsPage(new ViewModels.NewProjectDetailsViewModel(Project)));
         }
     }
 }

@@ -16,3 +16,4 @@ C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoControll
 C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoController\obj\Debug\ArduinoController.Views.ProjectDetailsPage.xaml.g.cs
 C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoController\obj\Debug\ArduinoController.Views.ProjectsPage.xaml.g.cs
 C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoController\obj\Debug\ArduinoController.Views.NewProjectPage.xaml.g.cs
+C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoController\obj\Debug\ArduinoController.Views.NewProjectDetailsPage.xaml.g.cs

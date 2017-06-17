@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="ArduinoController.Views.NewProjectDetailsPage"
+		Title="New Item">
+	<ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="60"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Label Grid.Row="0" Text="OUTPUTS" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
+
+            <ListView 
+                Grid.Row="1"                
+                x:Name="OutputsListView"
+				ItemsSource="{Binding Outputs}"
+                VerticalOptions="FillAndExpand"
+                ItemSelected="OnItemSelected"
+                SeparatorColor="DarkRed"
+                HasUnevenRows="true"
+                RefreshCommand="{Binding LoadOutputsCommand}"
+                IsPullToRefreshEnabled="true"
+                IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+                CachingStrategy="RecycleElement">
+                <ListView.ItemTemplate>
+                    <DataTemplate> 
+                        <ViewCell>                            
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                    <ColumnDefinition Width="50"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                </Grid.RowDefinitions>
+                                    <Label  Grid.Row="0" Grid.Column="0" Text="Output name" FontSize="Medium" />
+                                    <Entry Grid.Row="1" Grid.Column="0" Text="{Binding Name}" FontSize="Small" />
+                                    <Label Grid.Row="0" Grid.Column="1" Text="Signal to send" FontSize="Medium" />
+                                    <Editor Grid.Row="1" Grid.Column="1" Text="{Binding Signal}" FontSize="Small" Margin="0" />
+                                    <Label Grid.Row="0" Grid.Column="2" Text="Is int?" FontSize="Medium" />
+                                    <Switch Grid.Row="1" Grid.Column="2" IsToggled="{Binding IsInt}" />
+                                    <BoxView HeightRequest="6" VerticalOptions="FillAndExpand"/>
+                            </Grid>                                                    
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Button Grid.Row="2" Text="SAVE"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
