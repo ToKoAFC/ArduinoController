@@ -1,35 +1,26 @@
-﻿using System;
+﻿using ArduinoController.Database.Models;
+using ArduinoController.Helpers;
+using System;
 using System.Diagnostics;
 using System.Threading.Tasks;
-
-using ArduinoController.Helpers;
-using ArduinoController.Models;
-using ArduinoController.Views;
-
 using Xamarin.Forms;
 
 namespace ArduinoController.ViewModels
 {
-    public class ItemsViewModel : BaseViewModel
+    public class ProjectsViewModel : BaseViewModel
     {
-        public ObservableRangeCollection<Item> Items { get; set; }
-        public Command LoadItemsCommand { get; set; }
+        public ObservableRangeCollection<Project> Projects { get; set; }
+        public Command LoadProjectsCommand { get; set; }
 
-        public ItemsViewModel()
+        public ProjectsViewModel()
         {
-            Title = "Browse";
-            Items = new ObservableRangeCollection<Item>();
-            LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
-
-            MessagingCenter.Subscribe<NewItemPage, Item>(this, "AddItem", async (obj, item) =>
-            {
-                var _item = item as Item;
-                Items.Add(_item);
-                await DataStore.AddItemAsync(_item);
-            });
+            Title = "Projects";
+            Projects = new ObservableRangeCollection<Project>();
+            LoadProjectsCommand = new Command(async () => await ExecuteLoadProjectsCommand());
+            
         }
 
-        async Task ExecuteLoadItemsCommand()
+        async Task ExecuteLoadProjectsCommand()
         {
             if (IsBusy)
                 return;
@@ -38,9 +29,9 @@ namespace ArduinoController.ViewModels
 
             try
             {
-                Items.Clear();
-                var items = await DataStore.GetItemsAsync(true);
-                Items.ReplaceRange(items);
+                Projects.Clear();
+                var projects = await App.Database.GetProjectsAsync();
+                Projects.ReplaceRange(projects);
             }
             catch (Exception ex)
             {
@@ -48,7 +39,7 @@ namespace ArduinoController.ViewModels
                 MessagingCenter.Send(new MessagingCenterAlert
                 {
                     Title = "Error",
-                    Message = "Unable to load items.",
+                    Message = "Unable to load projects.",
                     Cancel = "OK"
                 }, "message");
             }

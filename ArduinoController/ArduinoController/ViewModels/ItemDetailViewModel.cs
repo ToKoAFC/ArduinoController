@@ -1,14 +1,14 @@
-﻿using ArduinoController.Models;
+﻿using ArduinoController.Database.Models;
 
 namespace ArduinoController.ViewModels
 {
-    public class ItemDetailViewModel : BaseViewModel
+    public class ProjectDetailsViewModel : BaseViewModel
     {
-        public Item Item { get; set; }
-        public ItemDetailViewModel(Item item = null)
+        public Project Project { get; set; }
+        public ProjectDetailsViewModel(Project project = null)
         {
-            Title = item.Text;
-            Item = item;
+            Title = project.Name;
+            Project = project;
         }
 
         int quantity = 1;

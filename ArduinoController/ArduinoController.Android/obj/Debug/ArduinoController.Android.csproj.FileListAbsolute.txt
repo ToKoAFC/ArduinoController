@@ -1,3 +1,4 @@
+C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoController.Android\obj\Debug\ArduinoController.Android.csprojResolveAssemblyReference.cache
 C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoController.Android\bin\Debug\ArduinoController.Android.dll
 C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoController.Android\bin\Debug\ArduinoController.Android.pdb
 C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoController.Android\bin\Debug\com.companyname.ArduinoController.apk
@@ -24,14 +25,17 @@ C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoControll
 C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoController.Android\bin\Debug\Xamarin.Forms.Xaml.dll
 C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoController.Android\bin\Debug\ArduinoController.pdb
 C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoController.Android\bin\Debug\FormsViewGroup.pdb
+C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoController.Android\bin\Debug\FormsViewGroup.dll.mdb
 C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoController.Android\bin\Debug\SQLite-net.xml
 C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoController.Android\bin\Debug\SQLite-net.dll.mdb
 C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoController.Android\bin\Debug\Xamarin.Forms.Core.pdb
 C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoController.Android\bin\Debug\Xamarin.Forms.Core.xml
+C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoController.Android\bin\Debug\Xamarin.Forms.Core.dll.mdb
 C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoController.Android\bin\Debug\Xamarin.Forms.Platform.Android.pdb
+C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoController.Android\bin\Debug\Xamarin.Forms.Platform.Android.dll.mdb
 C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoController.Android\bin\Debug\Xamarin.Forms.Xaml.pdb
 C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoController.Android\bin\Debug\Xamarin.Forms.Xaml.xml
-C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoController.Android\obj\Debug\ArduinoController.Android.csprojResolveAssemblyReference.cache
+C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoController.Android\bin\Debug\Xamarin.Forms.Xaml.dll.mdb
 C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoController.Android\obj\Debug\ArduinoController.Android.dll
 C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoController.Android\obj\Debug\ArduinoController.Android.pdb
 C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoController.Android\obj\Debug\android\bin\com.companyname.ArduinoController.apk
@@ -47,3 +51,12 @@ C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoControll
 C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoController.Android\obj\Debug\res\values\strings.xml
 C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoController.Android\obj\Debug\R.cs.flag
 C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoController.Android\obj\Debug\uploadflags.txt
+C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoController.Android\bin\Debug\ArduinoController.dll.mdb
+C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoController.Android\bin\Debug\ArduinoController.Android.dll.mdb
+C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoController.Android\obj\Debug\android\assets\ArduinoController.Android.dll.mdb
+C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoController.Android\obj\Debug\android\assets\ArduinoController.dll.mdb
+C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoController.Android\obj\Debug\android\assets\FormsViewGroup.dll.mdb
+C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoController.Android\obj\Debug\android\assets\SQLite-net.dll.mdb
+C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoController.Android\obj\Debug\android\assets\Xamarin.Forms.Core.dll.mdb
+C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoController.Android\obj\Debug\android\assets\Xamarin.Forms.Platform.Android.dll.mdb
+C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoController.Android\obj\Debug\android\assets\Xamarin.Forms.Xaml.dll.mdb

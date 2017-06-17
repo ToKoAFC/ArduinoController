@@ -11,8 +11,8 @@ C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoControll
 C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoController\obj\Debug\ArduinoController.csprojResolveAssemblyReference.cache
 C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoController\obj\Debug\ArduinoController.App.xaml.g.cs
 C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoController\obj\Debug\ArduinoController.Views.AboutPage.xaml.g.cs
-C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoController\obj\Debug\ArduinoController.Views.ItemDetailPage.xaml.g.cs
-C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoController\obj\Debug\ArduinoController.Views.ItemsPage.xaml.g.cs
-C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoController\obj\Debug\ArduinoController.Views.NewItemPage.xaml.g.cs
 C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoController\obj\Debug\ArduinoController.dll
 C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoController\obj\Debug\ArduinoController.pdb
+C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoController\obj\Debug\ArduinoController.Views.ProjectDetailsPage.xaml.g.cs
+C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoController\obj\Debug\ArduinoController.Views.ProjectsPage.xaml.g.cs
+C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoController\obj\Debug\ArduinoController.Views.NewProjectPage.xaml.g.cs
