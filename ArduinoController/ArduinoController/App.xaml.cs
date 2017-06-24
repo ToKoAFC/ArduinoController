@@ -10,7 +10,8 @@ namespace ArduinoController
 {
     public partial class App : Application
     {
-        static ProjectAccess database;
+        static ProjectAccess projectDatabase;
+        static WiFiSettingsAccess wifiSettingsDatabase;
 
         public App()
         {
@@ -19,15 +20,27 @@ namespace ArduinoController
             SetMainPage();
         }
 
-        public static ProjectAccess Database
+        public static ProjectAccess ProjectDatabase
         {
             get
             {
-                if (database == null)
+                if (projectDatabase == null)
                 {
-                    database = new ProjectAccess(DependencyService.Get<ILocalFileHelper>().GetLocalFilePath("Project.db3"));
+                    projectDatabase = new ProjectAccess(DependencyService.Get<ILocalFileHelper>().GetLocalFilePath("Project.db3"));
                 }
-                return database;
+                return projectDatabase;
+            }
+        }
+
+        public static WiFiSettingsAccess WiFiSettingsDatabase
+        {
+            get
+            {
+                if (wifiSettingsDatabase == null)
+                {
+                    wifiSettingsDatabase = new WiFiSettingsAccess(DependencyService.Get<ILocalFileHelper>().GetLocalFilePath("WiFiSettings.db3"));
+                }
+                return wifiSettingsDatabase;
             }
         }
 

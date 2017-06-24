@@ -30,7 +30,7 @@ namespace ArduinoController.ViewModels
             try
             {
                 Projects.Clear();
-                var projects = await App.Database.GetProjectsAsync();
+                var projects = await App.ProjectDatabase.GetProjectsAsync();
                 Projects.ReplaceRange(projects);
             }
             catch (Exception ex)

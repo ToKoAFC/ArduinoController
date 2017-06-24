@@ -11,8 +11,7 @@ namespace ArduinoController.Views
     public partial class NewProjectWiFiDetailsPage : ContentPage
     {
         NewProjectDetailsViewModel viewModel;
-
-
+        
         public NewProjectWiFiDetailsPage(NewProjectDetailsViewModel viewModel)
         {
             InitializeComponent();
@@ -21,7 +20,7 @@ namespace ArduinoController.Views
         
         async void SaveClicked(object sender, EventArgs e)
         {
-            await App.Database.SaveProjectAsync(viewModel.Project);
+            await App.ProjectDatabase.SaveProjectAsync(viewModel.Project);
 
         }
 
@@ -32,6 +31,11 @@ namespace ArduinoController.Views
                 return;
             
             OutputsListView.SelectedItem = null;
+        }
+        protected override void OnDisappearing()
+        {
+            base.OnDisappearing();
+            viewModel.SaveWiFiSettingCommand.Execute(null);
         }
     }
 }

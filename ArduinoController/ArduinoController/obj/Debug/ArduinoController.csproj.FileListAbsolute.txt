@@ -18,3 +18,4 @@ C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoControll
 C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoController\obj\Debug\ArduinoController.Views.NewProjectPage.xaml.g.cs
 C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoController\obj\Debug\ArduinoController.Views.NewProjectWiFiDetailsPage.xaml.g.cs
 C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoController\obj\Debug\ArduinoController.Views.NewProjectConnTypePage.xaml.g.cs
+C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoController\obj\Debug\ArduinoController.Views.ManageProjectPage.xaml.g.cs

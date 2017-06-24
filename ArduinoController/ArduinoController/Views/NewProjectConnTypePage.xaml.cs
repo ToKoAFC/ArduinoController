@@ -25,7 +25,7 @@ namespace ArduinoController.Views
         }
         async void BluetoothClicked(object sender, EventArgs e)
         {
-            await App.Database.SaveProjectAsync(viewModel.Project);
+            await App.ProjectDatabase.SaveProjectAsync(viewModel.Project);
         }
         
     }

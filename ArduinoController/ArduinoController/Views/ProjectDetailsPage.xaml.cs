@@ -21,5 +21,20 @@ namespace ArduinoController.Views
 
             BindingContext = this.viewModel = viewModel;
         }
+
+        private void DeleteClicked(object sender, System.EventArgs e)
+        {
+            viewModel.DeleteProjectCommand.Execute(null);
+            Navigation.PopToRootAsync();
+        }
+
+        private void EditClicked(object sender, System.EventArgs e)
+        {
+            Navigation.PushAsync(new NewProjectWiFiDetailsPage(new NewProjectDetailsViewModel(viewModel.Project)));
+        }
+        private void ManageClicked(object sender, System.EventArgs e)
+        {
+            Navigation.PushAsync(new ManageProjectPage(new ManageProjectViewModel(viewModel.Project)));
+        }
     }
 }
