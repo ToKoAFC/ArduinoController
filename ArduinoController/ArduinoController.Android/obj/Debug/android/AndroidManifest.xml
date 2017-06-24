@@ -3,6 +3,9 @@
   <!--suppress UsesMinSdkAttributes-->
   <uses-sdk android:minSdkVersion="15" />
   <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.BLUETOOTH" />
+  <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+  <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
   <application android:label="@string/app_name" android:name="android.app.Application" android:allowBackup="true" android:debuggable="true">
     <activity android:configChanges="orientation|screenSize" android:label="@string/app_name" android:theme="@style/MyTheme" android:name="md5e7ac672d0d1d1213a4a26fb926898350.MainActivity">
       <intent-filter>
@@ -19,4 +22,5 @@
       </intent-filter>
     </receiver>
   </application>
+  <!--this is necessary for Android v6+ to get the device name and address-->
 </manifest>

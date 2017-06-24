@@ -2,4 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.companyname.ArduinoController" android:versionCode="1" android:versionName="1.0">
 	<uses-sdk android:minSdkVersion="15" />
   <application android:label="@string/app_name"></application>
+<uses-permission android:name="android.permission.BLUETOOTH"/>
+<uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+
+<!--this is necessary for Android v6+ to get the device name and address-->
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 </manifest>

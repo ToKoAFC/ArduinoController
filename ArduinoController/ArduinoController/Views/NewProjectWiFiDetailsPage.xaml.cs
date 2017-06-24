@@ -8,17 +8,15 @@ using ArduinoController.ViewModels;
 
 namespace ArduinoController.Views
 {
-    public partial class NewProjectDetailsPage : ContentPage
+    public partial class NewProjectWiFiDetailsPage : ContentPage
     {
         NewProjectDetailsViewModel viewModel;
 
 
-        public NewProjectDetailsPage(NewProjectDetailsViewModel viewModel)
+        public NewProjectWiFiDetailsPage(NewProjectDetailsViewModel viewModel)
         {
             InitializeComponent();
             BindingContext = this.viewModel = viewModel;
-
-
         }
         
         async void SaveClicked(object sender, EventArgs e)

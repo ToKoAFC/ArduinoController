@@ -13,11 +13,15 @@ namespace ArduinoController.Views {
     
     [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Users\\tomas\\Desktop\\Study\\ArduinoController\\ArduinoController\\ArduinoControlle" +
         "r\\Views\\NewProjectDetailsPage - Copy.xaml")]
-    public partial class NewProjectPage : global::Xamarin.Forms.ContentPage {
+    public partial class NewProjectDetailsPage : global::Xamarin.Forms.ContentPage {
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::Xamarin.Forms.ListView OutputsListView;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {
-            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(NewProjectPage));
+            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(NewProjectDetailsPage));
+            OutputsListView = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.ListView>(this, "OutputsListView");
         }
     }
 }

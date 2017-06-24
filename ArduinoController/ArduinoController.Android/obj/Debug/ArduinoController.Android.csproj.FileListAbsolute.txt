@@ -60,3 +60,16 @@ C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoControll
 C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoController.Android\obj\Debug\android\assets\Xamarin.Forms.Core.dll.mdb
 C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoController.Android\obj\Debug\android\assets\Xamarin.Forms.Platform.Android.dll.mdb
 C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoController.Android\obj\Debug\android\assets\Xamarin.Forms.Xaml.dll.mdb
+C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoController.Android\bin\Debug\Plugin.BluetoothLE.Abstractions.dll
+C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoController.Android\bin\Debug\Plugin.BluetoothLE.dll
+C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoController.Android\bin\Debug\System.Reactive.Core.dll
+C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoController.Android\bin\Debug\System.Reactive.Interfaces.dll
+C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoController.Android\bin\Debug\System.Reactive.Linq.dll
+C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoController.Android\bin\Debug\System.Reactive.PlatformServices.dll
+C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoController.Android\bin\Debug\Plugin.BluetoothLE.Abstractions.pdb
+C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoController.Android\bin\Debug\System.Reactive.Core.xml
+C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoController.Android\bin\Debug\System.Reactive.Interfaces.xml
+C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoController.Android\bin\Debug\System.Reactive.Linq.xml
+C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoController.Android\bin\Debug\System.Reactive.PlatformServices.xml
+C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoController.Android\bin\Debug\Plugin.BluetoothLE.Abstractions.dll.mdb
+C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoController.Android\obj\Debug\android\assets\Plugin.BluetoothLE.Abstractions.dll.mdb

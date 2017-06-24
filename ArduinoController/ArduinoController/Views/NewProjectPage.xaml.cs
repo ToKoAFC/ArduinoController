@@ -24,7 +24,7 @@ namespace ArduinoController.Views
         async void SaveClicked(object sender, EventArgs e)
         {
             await App.Database.SaveProjectAsync(Project);
-            await Navigation.PushAsync(new NewProjectDetailsPage(new ViewModels.NewProjectDetailsViewModel(Project)));
+            await Navigation.PushAsync(new NewProjectWiFiDetailsPage(new ViewModels.NewProjectDetailsViewModel(Project)));
         }
     }
 }
