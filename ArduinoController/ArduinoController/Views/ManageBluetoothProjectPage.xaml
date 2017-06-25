@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="ArduinoController.Views.ManageBluetoothProjectPage"
+		Title="Bluetooth Settings">
+    <ContentPage.Content>
+        <Grid Padding="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <StackLayout Grid.Row="0">
+                <Picker
+            x:Name="pickerBluetoothDevices"
+            Title="Select a bluetooth device"
+            ItemsSource="{Binding ListOfDevices}"
+            SelectedItem="{Binding SelectedBthDevice}"
+            IsEnabled="{Binding IsPickerEnabled}"/>
+                <Entry
+            x:Name="entrySleepTime"
+            Keyboard="Numeric"
+            Placeholder="Sleep time"
+            Text="{Binding SleepTime}"/>
+                <StackLayout Orientation="Horizontal">
+                    <Button
+            x:Name="buttonConnect"
+            Text="Connect"
+            Command="{Binding ConnectCommand}"
+            IsEnabled="{Binding IsConnectEnabled}"/>
+                    <Button
+            x:Name="buttonDisconnect"
+            Text="Disconnect"
+            Command="{Binding DisconnectCommand}"
+            IsEnabled="{Binding IsDisconnectEnabled}"/>
+                </StackLayout>
+            </StackLayout>
+            <ListView            
+                x:Name="OutputsListView"       
+                Grid.Row="1"
+				ItemsSource="{Binding Outputs}"
+                VerticalOptions="FillAndExpand"
+                SeparatorColor="DarkRed"
+                HasUnevenRows="true"
+                CachingStrategy="RecycleElement">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Button Clicked="OutputClicked" Text="{Binding Name}"></Button>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
+        
+
+    </ContentPage.Content>
+</ContentPage>

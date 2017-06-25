@@ -44,7 +44,7 @@ namespace ArduinoController.Views
             if (project == null)
                 return;
 
-            Navigation.PushAsync(new ManageProjectPage(new ManageProjectViewModel(project.Id)));
+            Navigation.PushAsync(new ManageProjectPage(project.Id));
         }
 
         async void AddProjectClicked(object sender, EventArgs e)

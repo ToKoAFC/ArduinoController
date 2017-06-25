@@ -1,32 +1,36 @@
-﻿using System;
-
-using ArduinoController.Models;
-
-using Xamarin.Forms;
-using ArduinoController.Database.Models;
+﻿using ArduinoController.Database.Models;
 using ArduinoController.ViewModels;
+using System;
+using Xamarin.Forms;
 
 namespace ArduinoController.Views
 {
     public partial class ManageProjectPage : ContentPage
     {
-        ManageProjectViewModel viewModel;
-
-        public ManageProjectPage(ManageProjectViewModel viewModel)
-        {
-            BindingContext = this.viewModel = viewModel;
+        public Project Project { get; set; }
+        
+        public ManageProjectPage(int projectId)
+        {            
+            var project = App.ProjectDatabase.GetProject(projectId);
+            if (project == null)
+            {
+                Navigation.PopAsync();
+            }
+            Project = project;
+            Title = project.Name;
+            BindingContext = this;
             InitializeComponent();
         }
 
-        private void OutputClicked(object sender, EventArgs e)
+        void WiFiClicked(object sender, EventArgs e)
         {
-            var binObj = (BindableObject)sender;
-            var output = (Output)binObj.BindingContext;
-            if (output == null)
-            {
-                return;
-            }
-            viewModel.SendRequest(viewModel.UrlValue, output.Signal);
+            Navigation.PushAsync(new ManageWiFiProjectPage(new ManageWiFiProjectViewModel(Project.Id)));
+        }
+        void BluetoothClicked(object sender, EventArgs e)
+        {
+            App.ProjectDatabase.SaveProject(Project);
+            Navigation.PushAsync(new ManageBluetoothProjectPage(new ManageBluetoothProjectViewModel(Project.Id)));
+
         }
     }
 }

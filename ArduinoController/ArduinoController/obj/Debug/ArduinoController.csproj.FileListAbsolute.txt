@@ -10,10 +10,12 @@ C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoControll
 C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoController\bin\Debug\Xamarin.Forms.Xaml.xml
 C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoController\obj\Debug\ArduinoController.csprojResolveAssemblyReference.cache
 C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoController\obj\Debug\ArduinoController.App.xaml.g.cs
-C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoController\obj\Debug\ArduinoController.dll
-C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoController\obj\Debug\ArduinoController.pdb
 C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoController\obj\Debug\ArduinoController.Views.ProjectsPage.xaml.g.cs
 C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoController\obj\Debug\ArduinoController.Views.NewProjectPage.xaml.g.cs
 C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoController\obj\Debug\ArduinoController.Views.NewProjectWiFiDetailsPage.xaml.g.cs
+C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoController\obj\Debug\ArduinoController.Views.ManageWiFiProjectPage.xaml.g.cs
+C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoController\obj\Debug\ArduinoController.Views.ManageBluetoothProjectPage.xaml.g.cs
+C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoController\obj\Debug\ArduinoController.dll
+C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoController\obj\Debug\ArduinoController.pdb
 C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoController\obj\Debug\ArduinoController.Views.ManageProjectPage.xaml.g.cs
 C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoController\obj\Debug\ArduinoController.Views.NewProjectBluetoothDetailsPage.xaml.g.cs

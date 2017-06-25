@@ -37,10 +37,10 @@ C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoControll
 C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoController.Android\obj\Debug\android\assets\System.ComponentModel.Composition.dll
 C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoController.Android\obj\Debug\android\assets\System.Resources.ResourceManager.dll
 C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoController.Android\obj\Debug\android\assets\System.Diagnostics.Tools.dll
-C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoController.Android\obj\Debug\android\assets\System.Diagnostics.Debug.dll
-C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoController.Android\obj\Debug\android\assets\System.Threading.Tasks.dll
 C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoController.Android\obj\Debug\android\assets\System.ObjectModel.dll
+C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoController.Android\obj\Debug\android\assets\System.Diagnostics.Debug.dll
 C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoController.Android\obj\Debug\android\assets\System.Collections.dll
+C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoController.Android\obj\Debug\android\assets\System.Threading.Tasks.dll
 C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoController.Android\obj\Debug\android\assets\System.Net.Requests.dll
 C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoController.Android\obj\Debug\android\assets\System.Linq.Expressions.dll
 C:\Users\tomas\Desktop\Study\ArduinoController\ArduinoController\ArduinoController.Android\obj\Debug\android\assets\System.Linq.dll

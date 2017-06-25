@@ -20,7 +20,7 @@ namespace ArduinoController.Views
             InitializeComponent();
         }
         public NewProjectPage(int projectId)
-        {            
+        {
             var project = App.ProjectDatabase.GetProject(projectId);
             if (project == null)
             {
@@ -39,11 +39,13 @@ namespace ArduinoController.Views
         void WiFiClicked(object sender, EventArgs e)
         {
             App.ProjectDatabase.SaveProject(Project);
-            Navigation.PushAsync(new NewProjectWiFiDetailsPage(new NewProjectDetailsViewModel(Project.Id)));
+            Navigation.PushAsync(new NewProjectWiFiDetailsPage(new NewProjectWifiDetailsViewModel(Project.Id)));
         }
         void BluetoothClicked(object sender, EventArgs e)
         {
             App.ProjectDatabase.SaveProject(Project);
+            Navigation.PushAsync(new NewProjectBluetoothDetailsPage(new NewProjectBluetoothDetailsViewModel(Project.Id)));
+
         }
     }
 }

@@ -6,9 +6,9 @@ namespace ArduinoController.Views
 {
     public partial class NewProjectWiFiDetailsPage : ContentPage
     {
-        NewProjectDetailsViewModel viewModel;
+        NewProjectWifiDetailsViewModel viewModel;
         
-        public NewProjectWiFiDetailsPage(NewProjectDetailsViewModel viewModel)
+        public NewProjectWiFiDetailsPage(NewProjectWifiDetailsViewModel viewModel)
         {
             BindingContext = this.viewModel = viewModel;
             InitializeComponent();

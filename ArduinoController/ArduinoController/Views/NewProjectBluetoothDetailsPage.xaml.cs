@@ -6,9 +6,9 @@ namespace ArduinoController.Views
 {
     public partial class NewProjectBluetoothDetailsPage : ContentPage
     {
-        NewProjectDetailsViewModel viewModel;
+        NewProjectBluetoothDetailsViewModel viewModel;
         
-        public NewProjectBluetoothDetailsPage(NewProjectDetailsViewModel viewModel)
+        public NewProjectBluetoothDetailsPage(NewProjectBluetoothDetailsViewModel viewModel)
         {
             BindingContext = this.viewModel = viewModel;
             InitializeComponent();
@@ -30,7 +30,7 @@ namespace ArduinoController.Views
         protected override void OnDisappearing()
         {
             base.OnDisappearing();
-            viewModel.SaveWiFiSettingCommand.Execute(null);
+            viewModel.SaveBluetoothSettingCommand.Execute(null);
         }
     }
 }

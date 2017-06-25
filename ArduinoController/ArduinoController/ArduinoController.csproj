@@ -38,9 +38,11 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Database\Access\BluetoothSettingsAccess.cs" />
     <Compile Include="Database\Access\WiFiSettingsAccess.cs" />
     <Compile Include="Database\Access\ProjectAccess.cs" />
     <Compile Include="Database\ILocalFileHelper.cs" />
+    <Compile Include="Database\Models\BluetoothSettings.cs" />
     <Compile Include="Database\Models\WiFiSettings.cs" />
     <Compile Include="Database\Models\Project.cs" />
     <Compile Include="Helpers\MessengingCenterAlert.cs" />
@@ -49,14 +51,22 @@
     <Compile Include="Models\BaseDataObject.cs" />
     <Compile Include="Models\Item.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\IBth.cs" />
     <Compile Include="Services\IDataStore.cs" />
     <Compile Include="Services\MockDataStore.cs" />
-    <Compile Include="ViewModels\AboutViewModel.cs" />
-    <Compile Include="ViewModels\ManageProjectViewModel.cs" />
+    <Compile Include="ViewModels\ManageBluetoothProjectViewModel.cs" />
+    <Compile Include="ViewModels\ManageWiFiProjectViewModel.cs" />
+    <Compile Include="ViewModels\NewProjectBluetoothDetailsViewModel.cs" />
     <Compile Include="ViewModels\Output.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
-    <Compile Include="ViewModels\NewProjectDetailsViewModel.cs" />
+    <Compile Include="ViewModels\NewProjectWifiDetailsViewModel.cs" />
     <Compile Include="ViewModels\ProjectsViewModel.cs" />
+    <Compile Include="Views\ManageBluetoothProjectPage.xaml.cs">
+      <DependentUpon>ManageBluetoothProjectPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ManageWiFiProjectPage.xaml.cs">
+      <DependentUpon>ManageWiFiProjectPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\ManageProjectPage.xaml.cs">
       <DependentUpon>ManageProjectPage.xaml</DependentUpon>
     </Compile>
@@ -104,6 +114,18 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\NewProjectWiFiDetailsPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\ManageWiFiProjectPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\ManageBluetoothProjectPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

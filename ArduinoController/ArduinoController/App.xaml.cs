@@ -12,6 +12,7 @@ namespace ArduinoController
     {
         static ProjectAccess projectDatabase;
         static WiFiSettingsAccess wifiSettingsDatabase;
+        static BluetoothSettingsAccess bluetoothSettingsDatabase;
 
         public App()
         {
@@ -41,6 +42,18 @@ namespace ArduinoController
                     wifiSettingsDatabase = new WiFiSettingsAccess(DependencyService.Get<ILocalFileHelper>().GetLocalFilePath("WiFiSettings.db3"));
                 }
                 return wifiSettingsDatabase;
+            }
+        }
+
+        public static BluetoothSettingsAccess BluetoothSettingsDatabase
+        {
+            get
+            {
+                if (bluetoothSettingsDatabase == null)
+                {
+                    bluetoothSettingsDatabase = new BluetoothSettingsAccess(DependencyService.Get<ILocalFileHelper>().GetLocalFilePath("BluetoothSettings.db3"));
+                }
+                return bluetoothSettingsDatabase;
             }
         }
 

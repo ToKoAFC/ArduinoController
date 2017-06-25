@@ -2,36 +2,15 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              x:Class="ArduinoController.Views.ManageProjectPage"
-		Title="WiFi Settings">
-    <ContentPage.Content>
-        <Grid Padding="10">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"></RowDefinition>
-                <RowDefinition Height="*"></RowDefinition>
-            </Grid.RowDefinitions>
-            <StackLayout Grid.Row="0" HorizontalOptions="FillAndExpand">
-                <Label HorizontalOptions="Center" FontSize="Medium" Text="{Binding Project.Name}" />
+		Title="Manage Project">
+	<ContentPage.Content>
+		<StackLayout Spacing="20" Padding="15">
+            <Label Text="{Binding Project.Name}" FontSize="Medium" />
+            <Label Text="{Binding Project.Description}" FontSize="Medium" />
+            <StackLayout Orientation="Horizontal">
+                <Button BackgroundColor="#90CAF9" HorizontalOptions="Start" Text="Manage by Bluetooth" Clicked="BluetoothClicked"></Button>
+                <Button BackgroundColor="#424242" TextColor="White" HorizontalOptions="End" Text="Manage by Wi-Fi" Clicked="WiFiClicked"></Button>
             </StackLayout>
-
-            <ListView 
-                Grid.Row="1"                
-                x:Name="OutputsListView"                
-				ItemsSource="{Binding Outputs}"
-                VerticalOptions="FillAndExpand"
-                SeparatorColor="DarkRed"
-                HasUnevenRows="true"
-                RefreshCommand="{Binding LoadOutputsCommand}"
-                IsPullToRefreshEnabled="true"
-                IsRefreshing="{Binding IsBusy, Mode=OneWay}"
-                CachingStrategy="RecycleElement">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
-                            <Button Clicked="OutputClicked" Text="{Binding Name}"></Button>
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-        </Grid>
-    </ContentPage.Content>
+        </StackLayout>
+	</ContentPage.Content>
 </ContentPage>
