@@ -1,37 +1,38 @@
 ﻿using ArduinoController.Database.Models;
 using SQLite;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace ArduinoController.Database.Access
 {
     public class WiFiSettingsAccess
     {
-        readonly SQLiteAsyncConnection database;
+        readonly SQLiteConnection database;
 
         public WiFiSettingsAccess(string dbPath)
         {
-            database = new SQLiteAsyncConnection(dbPath);
-            database.CreateTableAsync<WiFiSettings>().Wait();
+            database = new SQLiteConnection(dbPath);
+            database.CreateTable<WiFiSettings>();
         }
 
-        public Task<List<WiFiSettings>> GetWiFiSettingsAsync(int projectId)
+        public List<WiFiSettings> GetWiFiSettings(int projectId)
         {
-            return database.Table<WiFiSettings>().Where(x => x.ProjectId == projectId).ToListAsync();
+            return database.Table<WiFiSettings>().Where(x => x.ProjectId == projectId).ToList();
         }
 
-        public Task<int> SaveWiFiSettingstAsync(WiFiSettings settings)
+        public int SaveWiFiSettings(WiFiSettings settings)
         {
             if (settings.Id != 0)
             {
-                return database.UpdateAsync(settings);
+                return database.Update(settings);
             }
-            return database.InsertAsync(settings);
+            return database.Insert(settings);
         }
 
-        public Task<int> DeleteWiFiSettingsAsync(WiFiSettings setting)
+        public int DeleteWiFiSettings(WiFiSettings setting)
         {
-            return database.DeleteAsync(setting);
+            return database.Delete(setting);
         }
     }
 }

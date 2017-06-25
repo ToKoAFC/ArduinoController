@@ -17,7 +17,7 @@ namespace ArduinoController.ViewModels
             Title = "Projects";
             Projects = new ObservableRangeCollection<Project>();
             LoadProjectsCommand = new Command(async () => await ExecuteLoadProjectsCommand());
-            
+
         }
 
         async Task ExecuteLoadProjectsCommand()
@@ -30,7 +30,7 @@ namespace ArduinoController.ViewModels
             try
             {
                 Projects.Clear();
-                var projects = await App.ProjectDatabase.GetProjectsAsync();
+                var projects = App.ProjectDatabase.GetProjects();
                 Projects.ReplaceRange(projects);
             }
             catch (Exception ex)

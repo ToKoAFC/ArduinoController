@@ -1,4 +1,5 @@
 ﻿using ArduinoController.Database.Models;
+using ArduinoController.ViewModels;
 using System;
 using Xamarin.Forms;
 
@@ -14,17 +15,21 @@ namespace ArduinoController.Views
 
             Project = new Project
             {
-                Name = "Item name",
-                Description = "This is a nice description"
+                Name = "Project name",
+                Description = "Write some words about your project"
             };
 
             BindingContext = this;
         }
 
-        async void SaveClicked(object sender, EventArgs e)
+        void WiFiClicked(object sender, EventArgs e)
         {
-            await App.ProjectDatabase.SaveProjectAsync(Project);
-            await Navigation.PushAsync(new NewProjectConnTypePage(new ViewModels.NewProjectDetailsViewModel(Project)));
+            App.ProjectDatabase.SaveProject(Project);
+            Navigation.PushAsync(new NewProjectWiFiDetailsPage(new NewProjectDetailsViewModel(Project.Id)));
+        }
+        void BluetoothClicked(object sender, EventArgs e)
+        {
+            App.ProjectDatabase.SaveProject(Project);
         }
     }
 }

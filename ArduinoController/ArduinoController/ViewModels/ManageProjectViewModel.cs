@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Net;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
@@ -16,24 +17,28 @@ namespace ArduinoController.ViewModels
         public List<WiFiSettings> WiFiSettings { get; set; }
         public List<Output> Outputs { get; set; }
 
-        public ManageProjectViewModel(Project project)
+        public ManageProjectViewModel(int projectId)
         {
-            WiFiSettings = new List<WiFiSettings>();
-            Title = project.Name;
-            Project = project;
-            Outputs = new List<Output>();
-            for (int i = 0; i < project.OutputsCount; i++)
-            {
-                Outputs.Add(new Output());
-            }
-            LoadSettings();
+            LoadProject(projectId);          
         }
 
-        async Task LoadSettings()
+        void LoadProject(int projectId)
         {
-            var wifiSettings = await App.WiFiSettingsDatabase.GetWiFiSettingsAsync(Project.Id);
-            if (wifiSettings == null)
+            var project =  App.ProjectDatabase.GetProject(projectId);
+            if (project == null)
             {
+                Project = new Project();
+            }
+            Project = project;
+            Title = project.Name;
+            Outputs = new List<Output>();
+            var wifiSettings = App.WiFiSettingsDatabase.GetWiFiSettings(projectId);
+            if (wifiSettings == null || !wifiSettings.Any())
+            {
+                for (int i = 0; i < Project.OutputsCount; i++)
+                {
+                    Outputs.Add(new Output());
+                }
                 return;
             }
             UrlValue = wifiSettings.FirstOrDefault().Url;
@@ -43,5 +48,13 @@ namespace ArduinoController.ViewModels
                 Signal = x.Controller
             }).ToList();
         }
+
+        public void SendRequest(string url, string action)
+        {
+            var fullURL = $"{url}/{action}";
+            var request = HttpWebRequest.CreateHttp(fullURL);
+            var response = request.GetResponseAsync();
+        }
+        
     }
 }

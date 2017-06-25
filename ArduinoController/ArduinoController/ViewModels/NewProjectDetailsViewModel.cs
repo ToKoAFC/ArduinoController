@@ -12,41 +12,55 @@ namespace ArduinoController.ViewModels
     public class NewProjectDetailsViewModel : BaseViewModel
     {
         public Command SaveWiFiSettingCommand { get; set; }
-        public Project Project { get; set; }
-        public string UrlValue { get; set; }
-        public List<WiFiSettings> WiFiSettings { get; set; }
-        public List<Output> Outputs { get; set; }
 
-        public NewProjectDetailsViewModel(Project project)
+        Project project = new Project();
+        public Project Project
         {
-            WiFiSettings = new List<WiFiSettings>();
-            Title = project.Name;
-            Project = project;
-            Outputs = new List<Output>();
-            for (int i = 0; i < project.OutputsCount; i++)
-            {
-                Outputs.Add(new Output());
-            }
-            LoadSettings();
-            SaveWiFiSettingCommand = new Command(async () => await ExecuteSaveWiFiSettingCommand());
+            get {return project;}
+            set { SetProperty(ref project, value);}
+        }
+     
+        public string UrlValue { get; set; }
+        public ObservableRangeCollection<WiFiSettings> WiFiSettings { get; set; }
+        public ObservableRangeCollection<Output> Outputs { get; set; }
 
+        public NewProjectDetailsViewModel(int projectId)
+        {
+            WiFiSettings = new ObservableRangeCollection<WiFiSettings>();
+            LoadProject(projectId);
+            SaveWiFiSettingCommand = new Command(async () => await ExecuteSaveWiFiSettingCommand());
         }
 
-        async Task LoadSettings()
+        void LoadProject(int projectId)
         {
-            var wifiSettings = await App.WiFiSettingsDatabase.GetWiFiSettingsAsync(Project.Id);
-            if (wifiSettings == null)
+            var project = App.ProjectDatabase.GetProject(projectId);
+            if (project == null)
             {
+                Project = new Project();
+            }
+            Project = project;
+            Title = project.Name;
+
+            Outputs = new ObservableRangeCollection<Output>();
+            var wifiSettings = App.WiFiSettingsDatabase.GetWiFiSettings(projectId);
+            if (wifiSettings == null || !wifiSettings.Any())
+            {
+                for (int i = 0; i < Project.OutputsCount; i++)
+                {
+                    Outputs.Add(new Output());
+                }
+
                 return;
             }
             UrlValue = wifiSettings.FirstOrDefault().Url;
-            Outputs = wifiSettings.Select(x => new Output
+            var wifiSett = wifiSettings.Select(x => new Output
             {
                 Name = x.VarName,
                 Signal = x.Controller
-            }).ToList();
+            });
+            Outputs.ReplaceRange(wifiSett);
         }
-
+        
         async Task ExecuteSaveWiFiSettingCommand()
         {
             if (IsBusy)
@@ -68,7 +82,7 @@ namespace ArduinoController.ViewModels
                 }
                 foreach (var settings in WiFiSettings)
                 {
-                    await App.WiFiSettingsDatabase.SaveWiFiSettingstAsync(settings);
+                    App.WiFiSettingsDatabase.SaveWiFiSettings(settings);
                 }
             }
             catch (Exception ex)

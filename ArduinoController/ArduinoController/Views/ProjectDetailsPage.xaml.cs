@@ -30,11 +30,11 @@ namespace ArduinoController.Views
 
         private void EditClicked(object sender, System.EventArgs e)
         {
-            Navigation.PushAsync(new NewProjectWiFiDetailsPage(new NewProjectDetailsViewModel(viewModel.Project)));
+            Navigation.PushAsync(new NewProjectWiFiDetailsPage(new NewProjectDetailsViewModel(viewModel.Project.Id)));
         }
         private void ManageClicked(object sender, System.EventArgs e)
         {
-            Navigation.PushAsync(new ManageProjectPage(new ManageProjectViewModel(viewModel.Project)));
+            Navigation.PushAsync(new ManageProjectPage(new ManageProjectViewModel(viewModel.Project.Id)));
         }
     }
 }

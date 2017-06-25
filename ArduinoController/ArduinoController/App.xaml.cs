@@ -46,22 +46,12 @@ namespace ArduinoController
 
         public static void SetMainPage()
         {
-            Current.MainPage = new TabbedPage
-            {
-                Children =
-                {
+            Current.MainPage =
                     new NavigationPage(new ProjectsPage())
                     {
                         Title = "Projects",
-                        Icon = Device.OnPlatform("tab_feed.png",null,null)
-                    },
-                    new NavigationPage(new AboutPage())
-                    {
-                        Title = "Settings",
-                        Icon = Device.OnPlatform("tab_about.png",null,null)
-                    },
-                }
-            };
+                        Icon = Device.OnPlatform("tab_feed.png", null, null)
+                    };
         }
     }
 }

@@ -28,7 +28,7 @@ namespace ArduinoController.ViewModels
 
             try
             {
-                await App.ProjectDatabase.DeleteProjectAsync(Project);                
+                App.ProjectDatabase.DeleteProject(Project);                
             }
             catch (Exception ex)
             {

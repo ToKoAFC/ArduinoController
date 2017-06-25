@@ -1,10 +1,6 @@
-﻿using System;
-
-using ArduinoController.Models;
-
+﻿using ArduinoController.ViewModels;
+using System;
 using Xamarin.Forms;
-using ArduinoController.Database.Models;
-using ArduinoController.ViewModels;
 
 namespace ArduinoController.Views
 {
@@ -14,14 +10,13 @@ namespace ArduinoController.Views
         
         public NewProjectWiFiDetailsPage(NewProjectDetailsViewModel viewModel)
         {
-            InitializeComponent();
             BindingContext = this.viewModel = viewModel;
+            InitializeComponent();
         }
         
         async void SaveClicked(object sender, EventArgs e)
         {
-            await App.ProjectDatabase.SaveProjectAsync(viewModel.Project);
-
+            App.ProjectDatabase.SaveProject(viewModel.Project);
         }
 
         private void OnItemSelected(object sender, SelectedItemChangedEventArgs e)

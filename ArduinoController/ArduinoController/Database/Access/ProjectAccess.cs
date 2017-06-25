@@ -1,42 +1,42 @@
 ﻿using ArduinoController.Database.Models;
 using SQLite;
 using System.Collections.Generic;
-using System.Threading.Tasks;
+using System.Linq;
 
 namespace ArduinoController.Database.Access
 {
     public class ProjectAccess
     {
-        readonly SQLiteAsyncConnection database;
+        readonly SQLiteConnection database;
 
         public ProjectAccess(string dbPath)
         {
-            database = new SQLiteAsyncConnection(dbPath);
-            database.CreateTableAsync<Project>().Wait();
+            database = new SQLiteConnection(dbPath);
+            database.CreateTable<Project>();
         }
 
-        public Task<List<Project>> GetProjectsAsync()
+        public List<Project> GetProjects()
         {
-            return database.Table<Project>().ToListAsync();
+            return database.Table<Project>().ToList();
         }
 
-        public Task<Project> GetProjectAsync(int projectId)
+        public Project GetProject(int projectId)
         {
-            return database.Table<Project>().Where(x => x.Id == projectId).FirstOrDefaultAsync();
+            return database.Table<Project>().Where(x => x.Id == projectId).FirstOrDefault();
         }
 
-        public Task<int> SaveProjectAsync(Project project)
+        public int SaveProject(Project project)
         {
-            if(project.Id != 0)
+            if (project.Id != 0)
             {
-                return database.UpdateAsync(project);
+                return database.Update(project);
             }
-            return database.InsertAsync(project);
+            return database.Insert(project);
         }
 
-        public Task<int> DeleteProjectAsync(Project project)
+        public int DeleteProject(Project project)
         {
-            return database.DeleteAsync(project);
+            return database.Delete(project);
         }
     }
 }

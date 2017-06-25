@@ -4,7 +4,7 @@
              x:Class="ArduinoController.Views.ManageProjectPage"
 		Title="WiFi Settings">
     <ContentPage.Content>
-        <Grid>
+        <Grid Padding="10">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"></RowDefinition>
                 <RowDefinition Height="*"></RowDefinition>
@@ -15,7 +15,7 @@
 
             <ListView 
                 Grid.Row="1"                
-                x:Name="OutputsListView"
+                x:Name="OutputsListView"                
 				ItemsSource="{Binding Outputs}"
                 VerticalOptions="FillAndExpand"
                 SeparatorColor="DarkRed"
@@ -27,7 +27,7 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <Button Text="{Binding Name}"></Button>
+                            <Button Clicked="OutputClicked" Text="{Binding Name}"></Button>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>

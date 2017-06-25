@@ -14,20 +14,37 @@ namespace ArduinoController.Views
 
         public ProjectsPage()
         {
-            InitializeComponent();
-
             BindingContext = viewModel = new ProjectsViewModel();
+            InitializeComponent();
+        }
+        
+        private void DeleteClicked(object sender, System.EventArgs e)
+        {
+            var binObj = (BindableObject)sender;
+            var project = (Project)binObj.BindingContext;
+            if (project == null)
+                return;
+            App.ProjectDatabase.DeleteProject(project);
+            viewModel.Projects.Remove(project);
         }
 
-        async void OnProjectSelected(object sender, SelectedItemChangedEventArgs args)
+        private void EditClicked(object sender, System.EventArgs e)
         {
-            var project = args.SelectedItem as Project;
+            var binObj = (BindableObject)sender;
+            var project = (Project)binObj.BindingContext;
             if (project == null)
                 return;
 
-            await Navigation.PushAsync(new ProjectDetailsPage(new ProjectDetailsViewModel(project)));
-            
-            ProjectsListView.SelectedItem = null;
+            Navigation.PushAsync(new NewProjectWiFiDetailsPage(new NewProjectDetailsViewModel(project.Id)));
+        }
+        private void ManageClicked(object sender, System.EventArgs e)
+        {
+            var binObj = (BindableObject)sender;
+            var project = (Project)binObj.BindingContext;
+            if (project == null)
+                return;
+
+            Navigation.PushAsync(new ManageProjectPage(new ManageProjectViewModel(project.Id)));
         }
 
         async void AddProjectClicked(object sender, EventArgs e)
@@ -40,6 +57,11 @@ namespace ArduinoController.Views
             base.OnAppearing();
             
                 viewModel.LoadProjectsCommand.Execute(null);
+        }
+
+        private void ProjectsListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            ProjectsListView.SelectedItem = null;
         }
     }
 }
