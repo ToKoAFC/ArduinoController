@@ -35,7 +35,7 @@ namespace ArduinoController.Views
             if (project == null)
                 return;
 
-            Navigation.PushAsync(new NewProjectWiFiDetailsPage(new NewProjectDetailsViewModel(project.Id)));
+            Navigation.PushAsync(new NewProjectPage((project.Id)));
         }
         private void ManageClicked(object sender, System.EventArgs e)
         {

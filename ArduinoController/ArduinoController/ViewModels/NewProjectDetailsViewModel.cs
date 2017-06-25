@@ -56,7 +56,8 @@ namespace ArduinoController.ViewModels
             var wifiSett = wifiSettings.Select(x => new Output
             {
                 Name = x.VarName,
-                Signal = x.Controller
+                Signal = x.Controller,
+                Id = x.Id
             });
             Outputs.ReplaceRange(wifiSett);
         }
@@ -77,7 +78,8 @@ namespace ArduinoController.ViewModels
                         Controller = output.Signal,
                         ProjectId = Project.Id,
                         VarName = output.Name,
-                        Url = UrlValue
+                        Url = UrlValue,
+                        Id = output.Id
                     });
                 }
                 foreach (var settings in WiFiSettings)

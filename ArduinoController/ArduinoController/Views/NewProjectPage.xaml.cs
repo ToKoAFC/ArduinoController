@@ -11,15 +11,29 @@ namespace ArduinoController.Views
 
         public NewProjectPage()
         {
-            InitializeComponent();
-
             Project = new Project
             {
                 Name = "Project name",
                 Description = "Write some words about your project"
             };
-
             BindingContext = this;
+            InitializeComponent();
+        }
+        public NewProjectPage(int projectId)
+        {            
+            var project = App.ProjectDatabase.GetProject(projectId);
+            if (project == null)
+            {
+                Project = new Project
+                {
+                    Name = "Project name",
+                    Description = "Write some words about your project"
+                };
+            }
+            Project = project;
+            Title = project.Name;
+            BindingContext = this;
+            InitializeComponent();
         }
 
         void WiFiClicked(object sender, EventArgs e)

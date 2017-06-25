@@ -56,19 +56,15 @@
     <Compile Include="ViewModels\Output.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
     <Compile Include="ViewModels\NewProjectDetailsViewModel.cs" />
-    <Compile Include="ViewModels\ProjectDetailsViewModel.cs" />
     <Compile Include="ViewModels\ProjectsViewModel.cs" />
-    <Compile Include="Views\AboutPage.xaml.cs">
-      <DependentUpon>AboutPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Views\ManageProjectPage.xaml.cs">
       <DependentUpon>ManageProjectPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\NewProjectBluetoothDetailsPage.xaml.cs">
+      <DependentUpon>NewProjectBluetoothDetailsPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\NewProjectWiFiDetailsPage.xaml.cs">
       <DependentUpon>NewProjectWiFiDetailsPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\ProjectDetailsPage.xaml.cs">
-      <DependentUpon>ProjectDetailsPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\ProjectsPage.xaml.cs">
       <DependentUpon>ProjectsPage.xaml</DependentUpon>
@@ -79,14 +75,6 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="App.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\AboutPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\ProjectDetailsPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -122,6 +110,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\ManageProjectPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\NewProjectBluetoothDetailsPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
